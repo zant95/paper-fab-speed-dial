@@ -1,0 +1,13 @@
+extends:
+  - zant
+
+plugins:
+  - html
+
+parserOptions:
+  ecmaVersion: 6
+  sourceType: script
+
+env:
+  browser: true
+  es6: true

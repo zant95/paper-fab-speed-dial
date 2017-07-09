@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "name": "paper-fab-speed-dial",
+  "description": "A Material Design - Floating Action Button with Speed Dial (Polymer)",
+  "version": "2.1.3",
+  "author": "collaborne",
+  "contributors": [
+    "Héctor Molinero Fernández <hector@molinero.xyz>"
+  ],
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/zant95/paper-fab-speed-dial",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zant95/paper-fab-speed-dial.git"
+  },
+  "scripts": {
+    "install": "bower install",
+    "lint": "eslint --ext .html . && polymer lint"
+  },
+  "devDependencies": {
+    "eslint": "4.x.x",
+    "eslint-plugin-html": "3.x.x",
+    "eslint-config-zant": "1.x.x"
+  }
+}
