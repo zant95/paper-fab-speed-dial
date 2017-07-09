@@ -2,7 +2,7 @@
   "private": true,
   "name": "paper-fab-speed-dial",
   "description": "A Material Design - Floating Action Button with Speed Dial (Polymer)",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "author": "collaborne",
   "contributors": [
     "Héctor Molinero Fernández <hector@molinero.xyz>"
