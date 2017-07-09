@@ -14,7 +14,6 @@ To use this element:
 <custom-element-demo>
   <template>
     <script src="../webcomponentsjs/webcomponents-lite.js"></script>
-    <link rel="import" href="../iron-icons/iron-icons.html">
     <link rel="import" href="paper-fab-speed-dial.html">
     <link rel="import" href="paper-fab-speed-dial-action.html">
     <custom-style>
@@ -30,7 +29,7 @@ To use this element:
 ```
 -->
 ```html
-<paper-fab-speed-dial with-backdrop>
+<paper-fab-speed-dial open-icon="icons:add" close-icon="icons:close" with-backdrop>
     <paper-fab-speed-dial-action icon="icons:content-copy">Copy</paper-fab-speed-dial-action>
     <paper-fab-speed-dial-action icon="icons:print">Print</paper-fab-speed-dial-action>
 </paper-fab-speed-dial>

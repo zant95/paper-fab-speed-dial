@@ -1,5 +1,4 @@
 <link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../iron-icons/iron-icons.html">
 <link rel="import" href="../paper-fab/paper-fab.html">
 <link rel="import" href="paper-fab-speed-dial-overlay.html">
 
@@ -18,7 +17,7 @@ Style                                            | Description
 ### Example
 
 ```html
-<paper-fab-speed-dial>
+<paper-fab-speed-dial open-icon="icons:add" close-icon="icons:close">
 <paper-fab-speed-dial-action icon="icons:content-copy">Copy</paper-fab-speed-dial-action>
 <paper-fab-speed-dial-action icon="icons:print">Print</paper-fab-speed-dial-action>
 </paper-fab-speed-dial>
@@ -52,11 +51,11 @@ Style                                            | Description
 			}
 		</style>
 
-		<paper-fab icon="[[icon]]" class="open" on-tap="open" hidden$="[[opened]]" disabled="[[disabled]]"></paper-fab>
+		<paper-fab icon="[[openIcon]]" class="open" on-tap="open" hidden$="[[opened]]" disabled="[[disabled]]"></paper-fab>
 
 		<paper-fab-speed-dial-overlay id="overlay" class="overlay" opened="{{opened}}" with-backdrop="[[withBackdrop]]">
 			<slot></slot>
-			<paper-fab icon="close" class="close" on-tap="close"></paper-fab>
+			<paper-fab icon="[[closeIcon]]" class="close" on-tap="close"></paper-fab>
 		</paper-fab-speed-dial-overlay>
 	</template>
 
@@ -69,9 +68,13 @@ Style                                            | Description
 
 			static get properties () {
 				return {
-					'icon': {
+					'openIcon': {
 						'type': String,
 						'value': 'add'
+					},
+					'closeIcon': {
+						'type': String,
+						'value': 'close'
 					},
 					'opened': {
 						'type': Boolean,
