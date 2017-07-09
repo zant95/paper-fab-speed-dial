@@ -1,7 +1,8 @@
 paper-fab-speed-dial
 =========
 
-`paper-fab-speed-dial` provides components to build a material design [Floating Action Button with Speed Dial](https://www.google.com/design/spec/components/buttons-floating-action-button.html#buttons-floating-action-button-transitions). The web component is built with [Polymer 1.x](https://www.polymer-project.org).
+`paper-fab-speed-dial` provides components to build a material design [Floating Action Button with Speed Dial](https://www.google.com/design/spec/components/buttons-floating-action-button.html#buttons-floating-action-button-transitions).
+The web component is built with [Polymer 2.x](https://www.polymer-project.org).
 
 ![Screenshot](/doc/screenshot.png "Screenshot")
 
@@ -9,25 +10,6 @@ To use this element:
 
 `bower install zant95/paper-fab-speed-dial`
 
-<!--
-```
-<custom-element-demo>
-  <template>
-    <script src="../webcomponentsjs/webcomponents-lite.js"></script>
-    <link rel="import" href="paper-fab-speed-dial.html">
-    <link rel="import" href="paper-fab-speed-dial-action.html">
-    <custom-style>
-    <style is="custom-style">
-      body {
-        min-height: 300px;
-      }
-    </style>
-    <custom-style>
-    <next-code-block></next-code-block>
-  </template>
-</custom-element-demo>
-```
--->
 ```html
 <paper-fab-speed-dial open-icon="icons:add" close-icon="icons:close" with-backdrop>
     <paper-fab-speed-dial-action icon="icons:content-copy">Copy</paper-fab-speed-dial-action>
