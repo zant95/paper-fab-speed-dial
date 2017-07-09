@@ -1,7 +1,8 @@
 {
   "name": "paper-fab-speed-dial",
   "authors": [
-    "collaborne"
+    "collaborne",
+    "zant95"
   ],
   "description": "A Material Design - Floating Action Button with Speed Dial (Polymer)",
   "main": "paper-fab-speed-dial.html",
@@ -15,7 +16,7 @@
     "navigation"
   ],
   "license": "Apache 2",
-  "homepage": "https://github.com/collaborne/paper-fab-speed-dial",
+  "homepage": "https://github.com/zant95/paper-fab-speed-dial",
   "ignore": [
     "**/.*"
   ],
