@@ -49,9 +49,18 @@ Style                                                   | Description
 			.label, .fab {
 				display: inline-block;
 			}
+
+			[hidden] {
+				display: none !important;
+			}
 		</style>
 
-		<div class="flex"><span class="label"><slot></slot></span></div>
+		<div class="flex">
+			<span class="label" hidden$="[[hideLabel]]">
+				<slot></slot>
+			</span>
+		</div>
+
 		<paper-fab class="fab" icon=[[icon]] mini></paper-fab>
 	</template>
 
@@ -64,10 +73,11 @@ Style                                                   | Description
 
 			static get properties () {
 				return {
-					/**
-					* Icon that is shown next to the content
-					*/
-					'icon': String
+					'icon': String,
+					'hideLabel': {
+						'type': Boolean,
+						'value': false
+					}
 				};
 			}
 		}
