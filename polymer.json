@@ -1,5 +1,4 @@
 {
-  "entrypoint": "index.html",
   "lint": {
     "rules": [ "polymer-2" ]
   }

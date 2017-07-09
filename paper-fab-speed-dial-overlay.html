@@ -10,12 +10,18 @@
 	(function () {
 		'use strict';
 
-		Polymer({
-			'is': 'paper-fab-speed-dial-overlay',
-			'behaviors': [
-				Polymer.IronOverlayBehavior
-			]
-		});
+		class PaperFabSpeedDialOverlay extends Polymer.mixinBehaviors([Polymer.IronOverlayBehavior], Polymer.Element) {
+			static get is () { return 'paper-fab-speed-dial-overlay'; }
+
+			static get properties () {
+				return {
+					'opened': Boolean,
+					'withBackdrop': Boolean
+				};
+			}
+		}
+
+		customElements.define(PaperFabSpeedDialOverlay.is, PaperFabSpeedDialOverlay);
 	})();
 	</script>
 </dom-module>

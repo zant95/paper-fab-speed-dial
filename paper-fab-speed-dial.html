@@ -62,44 +62,54 @@ Style                                            | Description
 
 	<script>
 	(function () {
-		Polymer({
-			'is': 'paper-fab-speed-dial',
+		'use strict';
 
-			'properties': {
-				'icon': {
-					'type': String,
-					'value': 'add'
-				},
-				'opened': {
-					'type': Boolean,
-					'notify': true
-				},
-				'disabled': {
-					'type': Boolean,
-					'value': false
-				},
-				'withBackdrop': Boolean
-			},
+		class PaperFabSpeedDial extends Polymer.Element {
+			static get is () { return 'paper-fab-speed-dial'; }
+
+			static get properties () {
+				return {
+					'icon': {
+						'type': String,
+						'value': 'add'
+					},
+					'opened': {
+						'type': Boolean,
+						'value': false,
+						'notify': true
+					},
+					'disabled': {
+						'type': Boolean,
+						'value': false
+					},
+					'withBackdrop': {
+						'type': Boolean,
+						'value': true
+					}
+				};
+			}
 
 			// Public methods
-			'open': function (e) {
+			open (event) {
 				// Required for mobile Safari to avoid passing the tap event to an element below the FAB
-				if (e) {
-					e.preventDefault();
+				if (event) {
+					event.preventDefault();
 				}
 
 				this.opened = true;
-			},
+			}
 
-			'close': function (e) {
+			close (event) {
 				// Required for mobile Safari to avoid passing the tap event to an element below the FAB
-				if (e) {
-					e.preventDefault();
+				if (event) {
+					event.preventDefault();
 				}
 
 				this.opened = false;
 			}
-		});
+		}
+
+		customElements.define(PaperFabSpeedDial.is, PaperFabSpeedDial);
 	})();
 	</script>
 </dom-module>

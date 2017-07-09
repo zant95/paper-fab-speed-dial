@@ -59,15 +59,20 @@ Style                                                   | Description
 	(function () {
 		'use strict';
 
-		Polymer({
-			'is': 'paper-fab-speed-dial-action',
-			'properties': {
-				/**
-				* Icon that is shown next to the content
-				*/
-				'icon': String
+		class PaperFabSpeedDialAction extends Polymer.Element {
+			static get is () { return 'paper-fab-speed-dial-action'; }
+
+			static get properties () {
+				return {
+					/**
+					* Icon that is shown next to the content
+					*/
+					'icon': String
+				};
 			}
-		});
+		}
+
+		customElements.define(PaperFabSpeedDialAction.is, PaperFabSpeedDialAction);
 	})();
 	</script>
 </dom-module>
