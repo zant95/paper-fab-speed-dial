@@ -12,13 +12,13 @@
     "polymer": "Polymer/polymer#2.x.x",
     "iron-iconset-svg": "PolymerElements/iron-iconset-svg#2.x.x",
     "iron-overlay-behavior": "PolymerElements/iron-overlay-behavior#2.x.x",
-    "paper-fab": "PolymerElements/paper-fab#2.x.x"
+    "paper-fab": "PolymerElements/paper-fab#2.x.x",
+    "paper-styles": "PolymerElements/paper-styles#2.x.x"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#2.x.x",
     "iron-demo-helpers": "PolymerElements/iron-demo-helpers#2.x.x",
     "paper-checkbox": "PolymerElements/paper-checkbox#2.x.x",
-    "paper-styles": "PolymerElements/paper-styles#2.x.x",
     "web-component-tester": "Polymer/web-component-tester#6.x.x"
   }
 }

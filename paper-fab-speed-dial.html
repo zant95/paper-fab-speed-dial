@@ -1,5 +1,6 @@
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../paper-fab/paper-fab.html">
+<link rel="import" href="../paper-styles/shadow.html">
 <link rel="import" href="paper-fab-speed-dial-overlay.html">
 
 <!--
@@ -28,6 +29,14 @@ Style                                            | Description
 <dom-module id="paper-fab-speed-dial">
 	<template>
 		<style>
+			.fab {
+				@apply(--shadow-elevation-6dp);
+			}
+
+			.fab[pressed] {
+				@apply(--shadow-elevation-8dp);
+			}
+
 			.open, .overlay {
 				position: fixed;
 				bottom: var(--paper-fab-speed-dial-bottom, 16px);
@@ -51,11 +60,11 @@ Style                                            | Description
 			}
 		</style>
 
-		<paper-fab icon="[[openIcon]]" class="open" on-tap="open" hidden$="[[opened]]" disabled="[[disabled]]"></paper-fab>
+		<paper-fab icon="[[openIcon]]" class="open fab" on-tap="open" hidden$="[[opened]]" disabled="[[disabled]]"></paper-fab>
 
 		<paper-fab-speed-dial-overlay id="overlay" class="overlay" opened="{{opened}}" with-backdrop="[[withBackdrop]]">
 			<slot></slot>
-			<paper-fab icon="[[closeIcon]]" class="close" on-tap="close"></paper-fab>
+			<paper-fab icon="[[closeIcon]]" class="close fab" on-tap="close"></paper-fab>
 		</paper-fab-speed-dial-overlay>
 	</template>
 

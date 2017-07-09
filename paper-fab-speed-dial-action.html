@@ -1,6 +1,7 @@
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="../paper-fab/paper-fab.html">
+<link rel="import" href="../paper-styles/shadow.html">
 
 <!--
 An action within a material design [Floating Action Button with Speed Dial](https://www.google.com/design/spec/components/buttons-floating-action-button.html#buttons-floating-action-button-transitions)
@@ -34,6 +35,7 @@ Style                                                   | Description
 			}
 
 			.label {
+				@apply(--shadow-elevation-6dp);
 				color: black;
 				background: white;
 				padding: 5px 10px;
@@ -42,8 +44,13 @@ Style                                                   | Description
 			}
 
 			.fab {
+				@apply(--shadow-elevation-6dp);
 				--paper-fab-background: var(--paper-fab-speed-dial-action-background);
 				--paper-fab-keyboard-focus-background: var(--paper-fab-speed-dial-action-keyboard-focus-background);
+			}
+
+			.fab[pressed] {
+				@apply(--shadow-elevation-8dp);
 			}
 
 			.label, .fab {
