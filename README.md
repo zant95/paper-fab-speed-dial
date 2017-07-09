@@ -7,7 +7,7 @@ paper-fab-speed-dial
 
 To use this element:
 
-`bower install paper-fab-speed-dial`
+`bower install zant95/paper-fab-speed-dial`
 
 <!--
 ```
