@@ -1,0 +1,12 @@
+env:
+  mocha: true
+
+globals:
+  MockInteractions: false
+  WCT: false
+  assert: false
+  expect: false
+  fixture: false
+
+rules:
+  no-unused-expressions: off

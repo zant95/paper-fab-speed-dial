@@ -27,11 +27,9 @@ Style                                            | Description
 @demo demo/index.html
 -->
 <dom-module id="paper-fab-speed-dial">
-
 	<template>
-
 		<style>
-			.open,.overlay {
+			.open, .overlay {
 				position: fixed;
 				bottom: var(--paper-fab-speed-dial-bottom, 16px);
 				right: var(--paper-fab-speed-dial-right, 16px);
@@ -60,51 +58,48 @@ Style                                            | Description
 			<slot></slot>
 			<paper-fab icon="close" class="close" on-tap="close"></paper-fab>
 		</paper-fab-speed-dial-overlay>
-
 	</template>
+
+	<script>
+	(function () {
+		Polymer({
+			'is': 'paper-fab-speed-dial',
+
+			'properties': {
+				'icon': {
+					'type': String,
+					'value': 'add'
+				},
+				'opened': {
+					'type': Boolean,
+					'notify': true
+				},
+				'disabled': {
+					'type': Boolean,
+					'value': false
+				},
+				'withBackdrop': Boolean
+			},
+
+			// Public methods
+			'open': function (e) {
+				// Required for mobile Safari to avoid passing the tap event to an element below the FAB
+				if (e) {
+					e.preventDefault();
+				}
+
+				this.opened = true;
+			},
+
+			'close': function (e) {
+				// Required for mobile Safari to avoid passing the tap event to an element below the FAB
+				if (e) {
+					e.preventDefault();
+				}
+
+				this.opened = false;
+			}
+		});
+	})();
+	</script>
 </dom-module>
-
-<script>
-
-(function() {
-
-	Polymer({
-		is: 'paper-fab-speed-dial',
-		properties: {
-			icon: {
-				type: String,
-				value: 'add'
-			},
-			opened: {
-				type: Boolean,
-				notify: true
-			},
-			disabled: {
-				type: Boolean,
-				value: false
-			},
-			withBackdrop: Boolean,
-		},
-
-		// Public methods
-		open: function(e) {
-			// Required for mobile Safari to avoid passing the tap event to an element below the FAB
-			if (e) {
-				e.preventDefault();
-			}
-
-			this.opened = true;
-		},
-		close: function(e) {
-			// Required for mobile Safari to avoid passing the tap event to an element below the FAB
-			if (e) {
-				e.preventDefault();
-			}
-
-			this.opened = false;
-		},
-	});
-
-})();
-
-</script>

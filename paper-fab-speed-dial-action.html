@@ -21,9 +21,7 @@ Style                                                   | Description
 @demo demo/index.html
 -->
 <dom-module id="paper-fab-speed-dial-action">
-
 	<template>
-
 		<style>
 			:host {
 				@apply --layout-horizontal;
@@ -48,31 +46,28 @@ Style                                                   | Description
 				--paper-fab-keyboard-focus-background: var(--paper-fab-speed-dial-action-keyboard-focus-background);
 			}
 
-			.label,.fab {
+			.label, .fab {
 				display: inline-block;
 			}
 		</style>
 
 		<div class="flex"><span class="label"><slot></slot></span></div>
 		<paper-fab class="fab" icon=[[icon]] mini></paper-fab>
-
 	</template>
+
+	<script>
+	(function () {
+		'use strict';
+
+		Polymer({
+			'is': 'paper-fab-speed-dial-action',
+			'properties': {
+				/**
+				* Icon that is shown next to the content
+				*/
+				'icon': String
+			}
+		});
+	})();
+	</script>
 </dom-module>
-
-<script>
-
-(function() {
-
-	Polymer({
-		is: 'paper-fab-speed-dial-action',
-		properties: {
-			/**
-			 * Icon that is shown next to the content
-			 */
-			icon: String
-		}
-	});
-
-})();
-
-</script>
