@@ -32,8 +32,16 @@
 					element = fixture('default');
 				});
 
-				test('defaults to closed', function () {
+				test('"opened" defaults to false', function () {
 					expect(element.opened).to.be.eql(false);
+				});
+
+				test('"disabled" defaults to false', function () {
+					expect(element.disabled).to.be.eql(false);
+				});
+
+				test('"withBackdrop" defaults to false', function () {
+					expect(element.withBackdrop).to.be.eql(false);
 				});
 
 				test('is opened when calling open()', function () {
